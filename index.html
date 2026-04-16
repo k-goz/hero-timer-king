@@ -7,12 +7,12 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #E8D5F5; --bg2: #F0E6FF;
-      --green: #22C55E; --green-dark: #16A34A;
-      --red: #EF4444; --red-dark: #DC2626;
-      --blue: #3B82F6; --槽底: #CBD5E1;
-      --purple-deep: #6B21A8; --purple-mid: #A855F7;
-      --gold: #F59E0B; --text: #374151; --white: #FFFFFF;
+      --bg: #1E3A5F; --bg2: #0F2744;
+      --green: #10B981; --green-dark: #059669;
+      --red: #F87171; --red-dark: #EF4444;
+      --blue: #06B6D4; --槽底: rgba(30,58,95,0.6);
+      --purple-deep: #FCD34D; --purple-mid: #FBBF24;
+      --gold: #FBBF24; --text: #F8FAFC; --white: #FFFFFF;
     }
     html, body {
       height: 100%;
@@ -27,7 +27,7 @@
     body::before {
       content: '';
       position: fixed; inset: 0;
-      background: rgba(255,255,255,0.3);
+      background: rgba(15,23,42,0.35);
       pointer-events: none; z-index: 0;
     }
     .container {
@@ -52,8 +52,8 @@
       z-index: 2;
     }
     .date-card {
-      background: linear-gradient(135deg, #FEF9C3 0%, #FDE68A 100%);
-      border: 2.5px solid #F59E0B;
+      background: rgba(15,23,42,0.7);
+      border: 2px solid rgba(251,191,36,0.6);
       border-radius: 20px;
       padding: 12px 8px;
       width: 108px;
@@ -210,11 +210,11 @@
       user-select: none;
     }
     .main-btn.green {
-      background: radial-gradient(circle at 35% 35%, #4ADE80, var(--green) 60%, var(--green-dark));
+      background: radial-gradient(circle at 35% 35%, #34D399, #10B981 60%, #059669);
       animation: pulse-green 2s ease-in-out infinite;
     }
     .main-btn.red {
-      background: radial-gradient(circle at 35% 35%, #FCA5A5, var(--red) 60%, var(--red-dark));
+      background: radial-gradient(circle at 35% 35%, #FCA5A5, #EF4444 60%, #DC2626);
       animation: pulse-red 1s ease-in-out infinite;
     }
     .main-btn.disabled { background: var(--槽底); animation: none; cursor: not-allowed; }
@@ -243,7 +243,7 @@
       transition: background 0.4s, box-shadow 0.4s;
     }
     .energy-cell.full {
-      background: linear-gradient(180deg, #93C5FD, var(--blue));
+      background: linear-gradient(180deg, #22D3EE, #06B6D4);
       box-shadow: 0 0 10px rgba(59,130,246,.5);
     }
     .energy-count {
@@ -280,7 +280,7 @@
     /* Modal */
     .modal-overlay {
       position: fixed; inset: 0;
-      background: rgba(107,33,168,.4);
+      background: rgba(15,23,42,0.7);
       backdrop-filter: blur(3px);
       z-index: 1000;
       display: flex; align-items: center; justify-content: center;
@@ -290,30 +290,30 @@
     }
     .modal-overlay.show { opacity: 1; pointer-events: all; }
     .modal {
-      background: var(--white);
+      background: rgba(15,23,42,0.92);
       border-radius: 20px; padding: 28px 20px;
       width: min(420px, 100%);
       max-height: 90vh; overflow-y: auto;
       box-shadow: 0 20px 50px rgba(107,33,168,.25);
       transform: scale(0.85);
       transition: transform 0.3s cubic-bezier(.34,1.56,.64,1);
-      border: 3px solid var(--purple-mid);
+      border: 2px solid rgba(251,191,36,0.5);
     }
     .modal-overlay.show .modal { transform: scale(1); }
     .modal-title {
       text-align: center;
       font-size: clamp(22px, 5vw, 32px);
-      color: var(--purple-deep); margin-bottom: 6px;
+      color: #FCD34D; margin-bottom: 6px;
     }
     .modal-body { text-align: center; }
-    .modal p { font-size: clamp(16px, 4vw, 20px); color: var(--text); margin-bottom: 16px; }
+    .modal p { font-size: clamp(16px, 4vw, 20px); color: #E2E8F0; margin-bottom: 16px; }
     .pwd-input {
       width: 100%; max-width: 200px;
       font-size: 28px; text-align: center;
-      border: 3px solid var(--purple-mid);
+      border: 2px solid rgba(251,191,36,0.5);
       border-radius: 12px; padding: 10px;
       font-family: inherit; outline: none;
-      color: var(--purple-deep); background: #faf5ff;
+      color: #1E293B; background: #FCD34D;
     }
     .pwd-input:focus { border-color: var(--gold); }
     .result-time {
