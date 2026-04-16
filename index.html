@@ -221,12 +221,24 @@
     .main-btn:hover:not(.disabled) { transform: scale(1.05); }
     .main-btn:active:not(.disabled) { transform: scale(0.95); }
     @keyframes pulse-green {
-      0%,100% { box-shadow: 0 6px 24px rgba(34,197,94,.4); }
-      50% { box-shadow: 0 6px 32px rgba(34,197,94,.6), 0 0 0 12px rgba(34,197,94,0); }
+      0%, 100% { 
+        box-shadow: 0 6px 24px rgba(34,197,94,.4);
+        transform: scale(1);
+      }
+      50% { 
+        box-shadow: 0 8px 32px rgba(34,197,94,.6), 0 0 0 16px rgba(34,197,94,0);
+        transform: scale(1.03);
+      }
     }
     @keyframes pulse-red {
-      0%,100% { box-shadow: 0 6px 24px rgba(239,68,68,.4); }
-      50% { box-shadow: 0 6px 32px rgba(239,68,68,.6), 0 0 0 10px rgba(239,68,68,0); }
+      0%, 100% { 
+        box-shadow: 0 6px 24px rgba(239,68,68,.4);
+        transform: scale(1);
+      }
+      50% { 
+        box-shadow: 0 8px 32px rgba(239,68,68,.6), 0 0 0 14px rgba(239,68,68,0);
+        transform: scale(1.02);
+      }
     }
     .energy-section { width: 100%; max-width: 400px; text-align: center; }
     .energy-label {
