@@ -2,7 +2,7 @@
 
 > 小朋友作业挑战计时器 — 纯前端单文件，无需任何依赖
 
-**在线访问**：https://k-goz.github.io/hero-timer-king/
+**在线访问**：https://hero-timer-king.vercel.app
 
 ## 功能
 
